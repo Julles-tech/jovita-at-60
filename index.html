@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jovita @ 60: You're Invited</title>
+<meta name="description" content="You're warmly invited to celebrate Jovita's 60th birthday, Sunday August 23, 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Mrs+Saint+Delafield&family=Great+Vibes&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="page-frame">
+  <main>
+
+    <!-- 1. HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__media">
+        <img src="jovita-photos/jovita-hero.webp" alt="Jovita smiling, celebrating in a flowing navy gown in a garden courtyard" class="hero__photo">
+        <div class="hero__wash" aria-hidden="true"></div>
+        <div class="hero__scrim" aria-hidden="true"></div>
+      </div>
+      <div class="hero__sparkles" aria-hidden="true"></div>
+      <div class="hero__content">
+        <p class="hero__eyebrow reveal" data-reveal="fade">A Golden Celebration</p>
+        <h1 class="hero__headline">
+          <span class="hero__name reveal" data-reveal="rise" style="--d:0">Jovita</span>
+          <span class="hero__at reveal" data-reveal="rise" style="--d:1">@</span>
+          <span class="hero__age reveal" data-reveal="rise" style="--d:2">60</span>
+          <span class="hero__shimmer" aria-hidden="true"></span>
+          <span class="hero__headline-sparkles" aria-hidden="true"></span>
+        </h1>
+        <p class="hero__sub reveal" data-reveal="fade" style="--d:3">You're warmly invited</p>
+        <p class="date-pill reveal" data-reveal="fade" style="--d:4">August 23, 2026</p>
+      </div>
+      <button class="scroll-cue" type="button" aria-label="Scroll to see more" onclick="document.getElementById('countdown').scrollIntoView({behavior:'smooth'})">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </button>
+    </section>
+
+    <!-- 2. COUNTDOWN -->
+    <section class="countdown" id="countdown">
+      <p class="section-label reveal" data-reveal="fade">Counting down to the celebration</p>
+      <div class="countdown__grid" id="countdownGrid" aria-live="polite">
+        <div class="ticket">
+          <span class="ticket__value" id="cd-days">00</span>
+          <span class="ticket__label">Days</span>
+        </div>
+        <div class="ticket">
+          <span class="ticket__value" id="cd-hours">00</span>
+          <span class="ticket__label">Hours</span>
+        </div>
+        <div class="ticket">
+          <span class="ticket__value" id="cd-mins">00</span>
+          <span class="ticket__label">Minutes</span>
+        </div>
+        <div class="ticket">
+          <span class="ticket__value" id="cd-secs">00</span>
+          <span class="ticket__label">Seconds</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. WELCOME -->
+    <section class="welcome" id="welcome">
+      <figure class="frame frame--welcome reveal" data-reveal="rise">
+        <img src="jovita-photos/jovita5.webp" alt="Jovita laughing warmly at a table with friends">
+      </figure>
+      <div class="welcome__text">
+        <h2 class="reveal" data-reveal="rise">With Love</h2>
+        <p class="reveal" data-reveal="rise">
+          Sixty years of laughter, strength, and unconditional love. Jovita has been the
+          heart of our family, and now it's our turn to celebrate her. We'd be so happy
+          to have you with us as we honor six wonderful decades.
+        </p>
+        <p class="signoff reveal" data-reveal="fade">The Domingo Family</p>
+      </div>
+    </section>
+
+    <!-- 4. HER STORY -->
+    <section class="story" id="story">
+      <p class="eyebrow reveal" data-reveal="fade">Her Story</p>
+      <h2 class="reveal" data-reveal="rise">Six Decades of Jovita</h2>
+
+      <div class="story__row story__row--left">
+        <figure class="frame reveal" data-reveal="rise">
+          <img src="jovita-photos/jovita1.webp" alt="Jovita gazing up at a flower-adorned religious image">
+        </figure>
+        <p class="story__caption reveal" data-reveal="rise">Rooted in faith</p>
+      </div>
+
+      <div class="story__row story__row--right">
+        <figure class="frame reveal" data-reveal="rise">
+          <img src="jovita-photos/jovita3.webp" alt="Jovita laughing with her hands framing her face outdoors">
+        </figure>
+        <p class="story__caption reveal" data-reveal="rise">Finds joy in every moment</p>
+      </div>
+
+      <div class="story__feature">
+        <figure class="frame frame--feature reveal" data-reveal="rise">
+          <img src="jovita-photos/jovita6.webp" alt="Jovita smiling on a sunlit bridge during her travels">
+        </figure>
+        <p class="story__caption reveal" data-reveal="rise">Always ready for the next adventure</p>
+      </div>
+    </section>
+
+    <!-- 5. GALLERY -->
+    <section class="gallery" id="gallery">
+      <h2 class="reveal" data-reveal="rise">Moments Worth Celebrating</h2>
+      <div class="gallery__grid">
+        <figure class="frame frame--wide reveal" data-reveal="rise">
+          <img src="jovita-photos/jovita7.webp" alt="Jovita smiling under a canopy of string lights at night">
+        </figure>
+        <div class="gallery__pair">
+          <figure class="frame frame--pair reveal" data-reveal="rise">
+            <img src="jovita-photos/jovita2.webp" alt="Jovita smiling on a city street holding a coffee">
+          </figure>
+          <figure class="frame frame--pair reveal" data-reveal="rise">
+            <img src="jovita-photos/jovita4.webp" alt="Jovita relaxing among pine trees, smiling">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. EVENT DETAILS -->
+    <section class="details" id="details">
+      <div class="ticket-panel reveal" data-reveal="rise">
+        <p class="ticket-panel__title">Save the Date</p>
+        <div class="ticket-panel__row">
+          <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M8 3v4M16 3v4M3 10h18"></path></svg>
+          <span>Sunday, August 23, 2026</span>
+        </div>
+        <div class="ticket-panel__row">
+          <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>
+          <span>St. Agatha Subdivision, Clubhouse Phase 1</span>
+        </div>
+        <div class="ticket-panel__row">
+          <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="8" r="1.2" fill="currentColor" stroke="none"></circle><circle cx="8.5" cy="13.5" r="1.2" fill="currentColor" stroke="none"></circle><circle cx="15.5" cy="13.5" r="1.2" fill="currentColor" stroke="none"></circle></svg>
+          <span>Gold &middot; White &middot; Green</span>
+        </div>
+        <a class="pill-link" href="https://www.google.com/calendar/render?action=TEMPLATE&text=Jovita%27s+60th+Birthday&dates=20260823T093000Z/20260823T153000Z&details=Celebrating+60+wonderful+years!&location=St.+Agatha+Subdivision%2C+Clubhouse+Phase+1" target="_blank" rel="noopener">Add to calendar</a>
+      </div>
+    </section>
+
+    <!-- 7. GETTING THERE -->
+    <section class="location" id="location">
+      <div class="location__card reveal" data-reveal="rise">
+        <h2>Getting There</h2>
+        <p>St. Agatha Subdivision<br>Clubhouse, Phase 1</p>
+        <a class="pill-link pill-link--outline" href="https://www.google.com/maps/search/?api=1&query=St.+Agatha+Subdivision+Clubhouse+Phase+1" target="_blank" rel="noopener">Get directions</a>
+      </div>
+    </section>
+
+    <!-- 8. RSVP -->
+    <section class="rsvp" id="rsvp">
+      <h2 class="reveal" data-reveal="rise">Kindly RSVP</h2>
+      <p class="reveal" data-reveal="rise">
+        This invitation was sent to you personally. Simply reply to this message
+        to let us know if you'll be joining the celebration! 💌
+      </p>
+    </section>
+
+    <!-- 9. CLOSING -->
+    <section class="closing" id="closing">
+      <div class="closing__sparkles" aria-hidden="true"></div>
+      <p class="closing__line reveal" data-reveal="rise">We can't wait to celebrate with you.</p>
+      <p class="script-line reveal" data-reveal="fade">With love and gratitude,</p>
+      <p class="signoff reveal" data-reveal="fade">The Domingo Family</p>
+    </section>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
