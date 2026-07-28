@@ -102,17 +102,20 @@
   scatterSparkles(document.querySelector(".closing__sparkles"), 20);
 
   /* ---------------------------------------------------------
-     Headline twinkle — one-shot sparkles timed with the shimmer sweep
+     Headline glitter — one-shot sparkle burst after the entrance settles
      --------------------------------------------------------- */
   function twinkleHeadline(container) {
     if (!container || prefersReducedMotion) return;
     var spots = [
-      { x: 8, y: 12, size: 6, delay: 1.15 },
-      { x: 90, y: 8, size: 5, delay: 1.55 },
-      { x: 82, y: 40, size: 7, delay: 1.3 },
-      { x: 12, y: 55, size: 5, delay: 1.75 },
-      { x: 94, y: 78, size: 6, delay: 1.45 },
-      { x: 6, y: 85, size: 5, delay: 1.9 }
+      { x: 8, y: 10, size: 7, delay: 1.15 },
+      { x: 90, y: 6, size: 5, delay: 1.55 },
+      { x: 82, y: 38, size: 8, delay: 1.3 },
+      { x: 12, y: 52, size: 6, delay: 1.75 },
+      { x: 94, y: 76, size: 7, delay: 1.45 },
+      { x: 6, y: 88, size: 6, delay: 1.9 },
+      { x: 96, y: 28, size: 5, delay: 1.65 },
+      { x: 4, y: 34, size: 5, delay: 2.05 },
+      { x: 60, y: 2, size: 6, delay: 1.4 }
     ];
     spots.forEach(function (spot) {
       var s = document.createElement("span");
