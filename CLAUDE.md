@@ -16,13 +16,14 @@ Standalone project. Not related to any other portfolio/codebase. Do not import c
 
 ## Real content status
 
-- **Photos:** real photos exist in [jovita-photos/](jovita-photos/) — `jovita-hero.webp` (hero) + `jovita1.webp` through `jovita7.webp`. Do not use placeholder blocks; these are final assets. Current assignment:
-  - Hero: `jovita-hero.webp`
-  - Welcome/"With Love": `jovita5.webp`
-  - Her Story (3 photos): `jovita1.webp`, `jovita3.webp`, `jovita6.webp`
-  - Gallery (3 photos): `jovita2.webp`, `jovita4.webp`, `jovita7.webp`
+- **Photos (replaced 2026-07-31):** the original `jovita1.webp`–`jovita7.webp` were removed and replaced with 8 new studio portraits, individually cropped to the site's 3:4 arched-frame ratio from raw source contact sheets in `jovi-new-photos/` (not committed — that folder holds unprocessed proofs/duplicates, treat `jovita-photos/` as the only source of truth for what's live). Do not use placeholder blocks; these are final assets. Current assignment:
+  - Hero: `jovita-hero.webp` (unchanged)
+  - Welcome/"With Love": `jovita-welcome.webp`
+  - Her Story (3 photos): `jovita-story-1.webp`, `jovita-story-2.webp`, `jovita-story-3.webp` (feature)
+  - Gallery (4 photos, 2x2 grid — widened from 3 to fit all 8 new photos; the old 1-wide + 2-pair layout and `.frame--wide` CSS were removed): `jovita-gallery-1.webp` through `jovita-gallery-4.webp`
 - **Event facts (updated 2026-07-28):** Sunday, August 23, 2026, 5:30 PM · St. Agatha Subdivision, Clubhouse Phase 1 · hosted by the Domingo Family · RSVP is by replying to the Messenger message, no form/button. The Gold/White/Green theme line was removed from the page at the user's request; it's no longer shown anywhere, so don't re-add it without asking.
-- **"Her Story" honesty note:** there are no archival/childhood photos, only recent candid ones. Don't caption them as fake chronology ("The Early Years," a baby photo, etc.) — that would be inventing history that isn't real. Caption this section around facets of who Jovita is now (faith, joy, adventurousness) instead of a fabricated life timeline.
+- **"Her Story" honesty note:** there are no archival/childhood photos, only recent studio portraits (bouquet-in-hand poses against blue/olive studio backdrops). Don't caption them as fake chronology ("The Early Years," a baby photo, etc.) or invent narrative content the photos don't show (no faith/travel imagery in the current set — captions were rewritten 2026-07-31 to describe mood/warmth instead, e.g. "Finds joy in every moment") — that would be inventing history that isn't real. Caption this section around facets of who Jovita is now instead of a fabricated life timeline.
+- **Decorative floral accents — tried and rejected (2026-08-01):** two attempts at floral decoration near section headings (a hand-drawn CSS/SVG sprig called `.floral-flourish`, then watercolor teal/blue bouquet images `.deco-bloom`/`.deco-corner` cut from user-supplied stock preview URLs) were both added and then explicitly removed at the user's request ("remove them all. it's ugly"). Don't reintroduce floral imagery/motifs near headings without asking first — this was tried twice and rejected both times. The unused `jovita-photos/deco-*.webp` files are still on disk (harmless, unreferenced) in case they're wanted for something else later. Diamond `.ornament-divider`s (before Event Details, inside Closing) are a separate motif that was never part of this feedback and stays.
 
 ## Stack
 

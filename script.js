@@ -102,6 +102,32 @@
   scatterSparkles(document.querySelector(".closing__sparkles"), 20);
 
   /* ---------------------------------------------------------
+     Live background — ambient sparkles twinkling in and out
+     behind the whole page
+     --------------------------------------------------------- */
+  function scatterLiveSparkles(container) {
+    if (!container || prefersReducedMotion) return;
+    var height = container.scrollHeight || container.offsetHeight || 4000;
+    var count = Math.max(50, Math.min(180, Math.round(height / 40)));
+    var colors = ["var(--peach)", "var(--blush)", "var(--terracotta)"];
+    for (var i = 0; i < count; i++) {
+      var s = document.createElement("span");
+      s.className = "live-bg__spark";
+      var size = 2 + Math.random() * 3;
+      s.style.width = size + "px";
+      s.style.height = size + "px";
+      s.style.left = Math.random() * 100 + "%";
+      s.style.top = Math.random() * 100 + "%";
+      s.style.background = colors[i % colors.length];
+      s.style.animationDuration = 2.5 + Math.random() * 4 + "s";
+      s.style.animationDelay = Math.random() * 6 + "s";
+      container.appendChild(s);
+    }
+  }
+
+  scatterLiveSparkles(document.querySelector(".live-bg"));
+
+  /* ---------------------------------------------------------
      Headline glitter — one-shot sparkle burst after the entrance settles
      --------------------------------------------------------- */
   function twinkleHeadline(container) {

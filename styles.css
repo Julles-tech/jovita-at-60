@@ -31,7 +31,7 @@
 *, *::before, *::after { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 body {
-  background: var(--teal-deep);
+  background: var(--teal-mid);
   color: var(--blush);
   font-family: var(--font-body);
   font-weight: 300;
@@ -46,12 +46,7 @@ a { color: inherit; }
 button { font: inherit; }
 
 @media (min-width: 560px) {
-  body {
-    padding: 48px 16px;
-    background:
-      radial-gradient(ellipse 900px 600px at 50% 0%, rgba(200,107,70,0.10), transparent 60%),
-      var(--teal-deep);
-  }
+  body { padding: 48px 16px; }
 }
 
 /* ============================================================
@@ -62,7 +57,7 @@ button { font: inherit; }
   max-width: var(--content-max);
   margin: 0 auto;
   border: 1px solid rgba(200, 107, 70, 0.55);
-  background: var(--teal-deep);
+  background: rgba(35, 75, 77, 0.85);
   overflow: hidden;
 }
 .page-frame::before {
@@ -75,6 +70,28 @@ button { font: inherit; }
 }
 @media (min-width: 560px) {
   .page-frame { box-shadow: 0 40px 90px rgba(0, 0, 0, 0.55); }
+}
+
+/* Live background — ambient sparkles that twinkle in and out behind
+   all content, showing through the 15% gap left in .page-frame's fill above */
+.live-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.live-bg__spark {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+  animation: live-spark-twinkle ease-in-out infinite;
+}
+@keyframes live-spark-twinkle {
+  0%, 100% { opacity: 0; transform: scale(0.4); }
+  50%      { opacity: 0.85; transform: scale(1.2); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .live-bg__spark { display: none; }
 }
 
 main { position: relative; }
@@ -194,13 +211,36 @@ h2 {
 }
 .frame--welcome { width: 66%; }
 .frame--feature { width: 82%; }
-.frame--wide {
+
+/* ============================================================
+   Decorative flourishes — diamond dividers, used sparingly
+   at section breaks throughout
+   ============================================================ */
+.ornament-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
   width: 100%;
-  border-radius: 50% 50% 8px 8px / 16% 16% 8px 8px;
+  max-width: 200px;
+  margin: 8px auto 32px;
 }
-.frame--wide img {
-  aspect-ratio: 4 / 3;
-  border-radius: 50% 50% 6px 6px / 16% 16% 6px 6px;
+.ornament-divider::before,
+.ornament-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(200, 107, 70, 0.55));
+}
+.ornament-divider::after {
+  background: linear-gradient(90deg, rgba(200, 107, 70, 0.55), transparent);
+}
+.ornament-divider__gem {
+  width: 9px;
+  height: 9px;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--peach), var(--terracotta));
+  transform: rotate(45deg);
+  box-shadow: 0 0 8px rgba(200, 107, 70, 0.45);
 }
 
 /* ============================================================
@@ -473,7 +513,6 @@ h2 {
 .gallery { padding-top: 40px; padding-bottom: 40px; }
 .gallery h2 { margin-bottom: 18px; }
 .gallery__grid { display: flex; flex-direction: column; gap: 11px; }
-.gallery__grid .frame--wide { margin-bottom: 3px; }
 .gallery__pair { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; }
 .frame--pair { width: 100%; }
 
